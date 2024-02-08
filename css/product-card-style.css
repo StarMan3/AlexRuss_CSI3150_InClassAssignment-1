@@ -1,0 +1,140 @@
+/* 
+Instructions on CSS Values Used:
+
+    1. HTML body background color is black
+    2. Font colors used are – Black and Light Gray
+    3. Available colors are – black, red, and beige (You can write the color name as-is while coding)
+    4. Padding on all sides on right sub-container i.e. product info container is 20px.
+    5. Separation between product card heading and subheading is 15px.
+    6. Separation between product card subheading and product description is 20px.
+    7. Padding from left side on product description is 50px.
+    8. Separation between product description and Available colors content is 20px.
+    9. In the available colors section, padding on all sides is 20px
+10. Separation between available colors and purchase is 20px.
+11. Separation between price sub-section and the end of the parent container is 20px.
+    12. Width and Height of available color containers is 20 by 20 px.
+    13. Font Size of product heading: 32px
+    14. Font size of product subheading: 18px
+    15. Font size of product description: 14px
+    16. Font size of the text – “Available colors”: 14px
+    17. Font size of the price value – 32px
+    18. Width and height of the button is 150px by 40px, respectively.
+    19. Width of overall parent container is 800px
+    20. Height of overall parent container is 500px
+    21. Separation of the top of the parent container from the top of the browser window is 120px.
+*/
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif, Helvetica;
+}
+  
+.product-card {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    margin: 120px auto;
+    background-color: white;
+}
+
+.left-img-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-info-col {
+    padding: 20px;
+    color: black;
+    background-color: white;
+    width: 50%;
+}
+
+.right-info-col h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.right-info-col h5 {
+    font-size: 18px;
+    color: lightgray;
+    margin-bottom: 20px;
+}
+
+.right-info-col p {
+    font-size: 14px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+/* .available-colors {
+    padding: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.available-colors span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+} */
+
+.available-colors {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* applies to only the first child */
+.available-colors span:first-child {
+    font-size: 14px;
+}
+
+.black-color-container,
+.red-color-container,
+.white-color-container {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/* Three color circles */
+.black-color-container {
+    background-color: black;
+}
+.red-color-container {
+    background-color: red;
+}
+.white-color-container {
+    background-color: beige;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price h4 {
+    font-size: 32px;
+}
+
+.buy-btn {
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* fade into red bg on hover */
+    transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: red;
+}
